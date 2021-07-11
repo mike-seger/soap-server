@@ -1,1 +1,14 @@
+server.port: ${PORT:8080}
+server.tomcat.additional-tld-skip-patterns: '*.jar'
+
 logging.level.root: info
+
+management:
+  endpoints:
+    configprops.enabled: true
+    beans.enabled: true
+    shutdown.enabled: true
+    enabled-by-default: true
+    sensitive: false
+    enabled: true
+    web.exposure.include: "*"
