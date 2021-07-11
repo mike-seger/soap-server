@@ -8,6 +8,7 @@ https://github.com/spring-guides/gs-producing-web-service
 ----
 
 == Call web service
+=== Request
 [source,bash]
 ----
 # Use inline XML request
@@ -26,11 +27,11 @@ curl <<-EOF -fsSL -H "content-type: text/xml" -d @- http://localhost:8080/ws \
 </soapenv:Envelope>
 
 EOF
+----
 
-# =============
-# Response:
-# =============
-
+=== Response
+[source,xml]
+----
 <?xml version="1.0"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
   <SOAP-ENV:Header/>
